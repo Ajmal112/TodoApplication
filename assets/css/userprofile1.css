@@ -1,0 +1,128 @@
+.section-head {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+body {
+ margin: 0px;
+ padding: 0px;
+ overflow: hidden;
+}
+
+#userprofile-img {
+    width: 280px;
+    height: 360px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.profilecontainer {
+    display: flex;
+}
+.username-city {
+  margin-top: 160px;
+  margin-left: -120px;
+  font-size: 22px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+.editbtn {
+    margin-left: -240px;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 600;
+}
+.delbtn {
+    position: relative;
+    top: 60px;
+    left: -205px;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 600;
+}
+.section2 {
+    width: 100%;
+    height: 200px;
+    margin-top: -120px;
+    margin-left: -20px;
+    background-color: whitesmoke;
+}
+.section-about {
+    width: 1300px;
+    height: 180px;
+    display: flex;
+    /* margin-top: -120px;
+    margin-left: -20px; */
+    background-color: whitesmoke;
+}
+.section-about-head {
+    width: 1000px;
+    height:100px;
+    background-color: white;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+     margin-top: 30px;
+    margin-left: 50px;
+}
+#about , #address {
+    width: 550px;
+    margin-top: 25px;
+    margin-left: 50px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+#date , #gender , #number {
+    width: 250px;
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 14px;
+    background-color: whitesmoke;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+#edit {
+    width: 280px;
+    margin-top: 23px;
+    margin-left: 24px;
+    padding: 13px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.1s;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#edit:hover {
+    transform: scale(1.02);
+}
+.followlist {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 35px;
+    font-weight: 600;
+    /* text-align: center; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 1130px;
+}
+.follows-title {
+    font-size: 20px;
+    font-weight: 550;
+    font-family: sans-serif;
+    opacity: 0.4;
+}

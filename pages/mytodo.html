@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../assets/css/mytodo.css">
+      <!-- Box icon CSS   -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<!-- End -->
+</head>
+<body>
+
+
+<div class="sidebar close">
+    <div class="logo-details">
+        <i class="bx bx-task"></i>
+      <span class="logo_name">TodoMaster</span>
+    </div>
+    <ul class="nav-links">
+  
+      <li>
+        <li class="active">
+            <a href="#">
+              <i class='bx bx-task'></i>
+              <span class="link_name">My Todo's</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">My Todo's</a></li>
+            </ul>
+          </li>
+          <li>
+        <li>
+            <a href="../index2.html">
+                <i class="bx bx-history"></i>
+              <span class="link_name">All Todo's</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">All Todo's</a></li>
+            </ul>
+          </li>
+          <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class='bx bx-news'></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">Personal Tasks</a></li>
+          <li><a href="#">Work/Professional Tasks</a></li>
+          <li><a href="#">Academic Tasks</a></li>
+          <li><a href="#">Health and Fitness Tasks</a></li>
+          <li><a href="#">Financial Tasks</a></li>
+          <li><a href="#">Social/Event Tasks</a></li>
+          <li><a href="#">Travel Tasks</a></li>
+          <li><a href="#">Home Improvement Tasks</a></li>
+          <li><a href="#">Personal Growth Tasks</a></li>
+          <li><a href="#">Miscellaneous/Other Tasks</a></li>        
+        </ul>
+      </li>
+       <li>
+      <li>
+        <a href="#">
+            <i class="bx bx-refresh"></i>
+          <span class="link_name">Recurring Todo's</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Recurring Todo's</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+            <i class='bx bx-cog'></i>
+          <span class="link_name">Settings</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+            <i class="bx bx-moon"></i>
+          <span class="link_name">Dark Mode</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dark Mode</a></li>
+        </ul>
+      </li>
+      <li>
+        <form id="logoutbtn" ><button class="logoutbtn" type="submit">
+            <i class="bx bx-log-out"></i>
+          <span class="link_name">LogOut</span>
+        </button></form>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <a class="profile-content" href="pages/userprofile1.html">
+            <img id="profile_pic" src="" alt="profileImg">
+          </a>
+          <div class="name-job">
+            <div class="profile_name" id="profile_name"></div>
+            <div class="job">Todo User</div>
+          </div>
+          <i class='bx bx-log-out'></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <span class="text">Inbox</span>
+    </div>
+
+<div class="search-add-task">
+    <button class="addtask" id="addtask" type="button" ><i class="bx bx-plus"></i>&nbsp;Add task</button>
+    <i class="bx bx-search"></i><input class="form-control mr-sm-2" type="search" placeholder="Search Todo By Category" id="search" aria-label="Search">
+</div>
+
+
+<h1 class="todohead">My ToDo's</h1>
+<div id="todo-container" class="app">
+   
+
+ 
+</div>
+
+
+<!-- display none when click add new task it becomes display block -->
+<div id="popupOverlay">
+    <div id="popupContent">
+      <h2 class="newtaskh1">Add New Task</h2><br>
+
+      <form id="form">
+
+      <div id="overflow">
+      <div class="form-floating mb-3" id="firstinput">
+        <input type="text" class="form-control" id="taskname" id="floatingInput" placeholder="name@example.com" required>
+        <label for="floatingInput">Task Name</label>
+      </div>
+      <div class="form-floating" id="firstinput">
+        <textarea class="form-control" id="taskdetails" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+        <label for="floatingTextarea2">Task Details</label>
+      </div>
+      <br>
+      <select class="form-select" aria-label="Default select example" id="taskcategory" required>
+        <option disabled selected value="">Task Category</option>
+        <option value="Personal Tasks">Personal Tasks</option>
+        <option value="Work/Professional Tasks">Work/Professional Tasks</option>
+        <option value="Academic Tasks">Academic Tasks</option>
+        <option value="Health and Fitness Tasks">Health and Fitness Tasks</option>
+        <option value="Financial Tasks">Financial Tasks</option>
+        <option value="Social/Event Tasks">Social/Event Tasks</option>
+        <option value="Travel Tasks">Travel Tasks</option>
+        <option value="Home Improvement Tasks">Home Improvement Tasks</option>
+        <option value="Personal Growth Tasks">Personal Growth Tasks</option>
+        <option value="Miscellaneous/Other Tasks">Miscellaneous/Other Tasks</option>
+      </select>
+      <br> 
+      <div class="form-floating mb-3" id="firstinput" >
+        <input type="datetime-local" class="form-control taskdue" id="taskdue" id="floatingInput" placeholder="name@example.com" required >
+        <label for="floatingInput">Task DueDate</label>
+      </div>
+      <div class="form-floating mb-3" id="firstinput">
+        <input type="email" class="form-control"  id="taskassignee" id="floatingInput" placeholder="name@example.com" required >
+        <label for="floatingInput">Task Assignee</label>
+      </div>
+      <select class="form-select" aria-label="Default select example" id="taskstatus" required>
+        <option disabled selected value="">Task Status</option>
+        <option value="Completed">Completed</option>
+        <option value="Currently Working">Currently Working</option>
+        <option value="Not Completed (Incomplete)">Not Completed (Incomplete)</option>
+        <option value="Not Yet Started">Not Yet Started</option>
+
+      </select>
+      <br>
+      <div class="form-floating mb-3" id="firstinput">
+        <input type="text" class="form-control" id="projectname"  id="floatingInput" placeholder="name@example.com" value="For Example : Project Performance" >
+        <label for="floatingInput">Project Name</label>
+      </div>
+      <select class="form-select" aria-label="Default select example" id="taskpriority" required>
+        <option disabled selected value="">Task Priority</option>
+        <option value="High" style="background-color: red; color: white;">High</option>
+        <option value="Medium" style="background-color: orange; color: white;">Medium</option>
+        <option value="Low" style="background-color: green; color: white;">Low</option>
+      </select>
+      <br>
+      <div class="form-floating mb-3" id="firstinput" >
+        <input type="text" class="form-control" id="tasktags"  id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Task Tags  (Optional)</label>
+      </div>
+      <button type="button" id="closePopup" class="btn btn-danger">Cancel</button>
+      <button type="submit" id="openPopup" class="btn btn-success">Submit</button>
+    </div>
+
+</form>
+
+    </div>
+  </div>
+  <!-- display none when click add new task it becomes display block -->
+
+
+   
+
+
+
+
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+<script src="../assets/js/mytodo.js"></script>
+</body>
+</html>

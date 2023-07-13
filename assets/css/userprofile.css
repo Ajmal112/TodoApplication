@@ -1,0 +1,100 @@
+.user-row {
+    margin-bottom: 14px;
+  }
+  table {
+    margin-left: 10px;
+  }
+  .table-user-information > tbody > tr {
+    border-top: 1px solid #ccc;
+  }
+  
+  .table-user-information > tbody > tr:first-child {
+    border-top: 0;
+  }
+  
+  .table-user-information > tbody > tr > td {
+    border-top: 0;
+  }
+  
+  .panel {
+    margin-top: 20px;
+  }
+  .panel-title {
+    margin-top: 100px;
+  }
+  .edit , .delete {
+    padding:10px;
+    width:100px;
+    border: none;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+  }
+  .edit:hover ,.delete:hover ,.delUserProfile:hover {
+    transform: scale(1.05);
+  }
+ .img-circle {
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+ }
+ .editProfileInput {
+  margin-left: 20%;
+  position: absolute;
+  top:200px;
+  width: 350px;
+ }
+.submitEditProfile {
+  margin-left: 45%;
+  position: absolute;
+  top:198px;
+}
+#panel-editprofile , #panel-editprofile1 {
+  display: none;
+}
+.delUserProfile {
+  margin-left: 40%;
+  padding: 10px;
+  position: absolute;
+  top:650px;
+  left: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+}
+.container , .body {
+  background-color: #87CEFA;
+}
+
+
+
+		/* Loading animation styles */
+		.loader {
+			border: 8px solid #f3f3f3; 
+			border-top: 8px solid #3498db; 
+			border-radius: 50%;
+			width: 350px;
+			height: 350px;
+			/* animation: spin 2s linear infinite; */
+			margin: auto;
+      position: absolute;
+      top:  260px;
+      left: 500px;
+		}
+
+    .loader2 {
+			width: 250px;
+			height: 250px;
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+
+		}
+
+		/* Keyframe animation for loading spinner */
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
